@@ -1,0 +1,245 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[letterpaper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.95]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\setlength{\columnsep}{10pt}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{6pt}
+
+% (Removed biblatex to avoid dependency)
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+% (Publications disabled, so no bibliography resource required)
+
+% (Removed fontawesome5 icons to avoid dependency)
+
+%debug page outer frames
+%\usepackage{showframe}
+
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[2pt]
+    \end{tabularx}
+    \begin{itemize}[nosep,after=\strut, leftmargin=0.9em, itemsep=1pt,label=--]
+    }
+    {
+    \end{itemize}
+    }
+
+
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Daniel Raymond} \\[6pt]
+\href{https://github.com/electricalhog}{GitHub: electricalhog} \ $|$ \ 
+\href{mailto:dcraymond@wpi.edu}{Email: dcraymond@wpi.edu} \ $|$ \ 
+Phone: (413) 271-2478 \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+Power electronics and embedded hardware engineer with 6+ years of PCB design, prototyping, and test. Cross-disciplinary, hands-on, and focused on reliable products.
+
+%Experience
+\section{Work Experience}
+
+\begin{joblong}{Electrical Engineer Intern — Emvolon Inc., Woburn, MA}{May 2025 -- Aug 2025}
+\item Integrated PLCs/DAQs and embedded controllers; brought up and validated hardware
+\item Implemented requirements in schematics and test plans; supported patent-pending microgrid topology
+\end{joblong}
+
+\begin{joblong}{Automotive Technician — Jay's Garage, Mendon, MA}{Jun 2023 -- Aug 2023}
+\item Diagnosed and executed complex mechanical/electrical repairs; reduced turnaround and parts cost
+\end{joblong}
+
+\begin{joblong}{Studio Assistant — Studio David Teeple, Northampton, MA}{Jul 2022 -- Present}
+\item Supported studio operations and technology integration for installations
+\end{joblong}
+
+\begin{joblong}{Business Assistant — Hennessey Precision, Northampton, MA}{Aug 2020 -- Feb 2022}
+\item Streamlined intake/repair/billing workflows to increase shop throughput
+\end{joblong}
+
+\begin{joblong}{Student Leader — FRC Team 4097}{Jan 2019 -- Mar 2022}
+\item Led electronics subteam (power distribution, wiring, safety); mentored new members
+\end{joblong}
+  
+%Projects
+\section{Projects}
+
+\begin{multicols}{2}
+\begin{joblong}{USB-C PD Charger}{Up to 240W}
+\item DC-input USB PD 3.1 (to 240W); GaN stage on multilayer PCB; cycle-by-cycle control and protections; ~90\% peak eff.
+\end{joblong}
+
+\begin{joblong}{Buck Voltage Regulator}{>98\%}
+\item Multiphase buck with custom switch timing for fast transients; low-loss parts; >98\% measured
+\end{joblong}
+
+\begin{joblong}{Electronic Load}{to 2kW}
+\item Modular linear and switch-mode loads for MVDC prototyping and test
+\end{joblong}
+
+\begin{joblong}{Class D Amplifier}{24W}
+\item Fully analog class-D: oscillator, feedback, filters, MOSFET drivers; >70\% eff.; validated on network analyzer
+\end{joblong}
+
+\begin{joblong}{Permalux LED Lamp}{Longevity}
+\item Desk lamp with replaceable CoB driver; analysis of reliability, cost, and product obsolescence
+\end{joblong}
+
+\begin{joblong}{Load Switch}{PWM-Controlled DC}
+\item Solid-state switch for DC loads from servo PWM; designed for manufacturability and cost; sold online
+\end{joblong}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\begin{joblong}{Worcester Polytechnic Institute (WPI) — B.S. Electrical \& Computer Engineering}{Aug 2022 -- May 2026}
+\item GPA: 3.50/4.0 \quad Coursework: Advanced Analog IC Design, Power Electronics, Analog Circuits, RF Design
+\end{joblong}
+
+\begin{joblong}{Smith College — Dual Enrollment (High School)}{2021 -- 2022}
+\item Coursework: Electronics (PHY 240)
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+% \section{Publications}
+% \begin{refsection}[citations.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Design &  \normalsize{KiCad, Cadence Virtuoso, SolidWorks, SPICE, MATLAB, Schematics, P\&IDs/PFDs}\\
+Build  &  \normalsize{SMD soldering, 3D printing, Fabrication, MIG/TIG welding}\\
+Test &  \normalsize{LabVIEW, Oscilloscope, Network Analyzer, Power Supply, Electronic Load}\\
+Programming &  \normalsize{Embedded C/C++, Python, Rust, HDL/Verilog}\\
+Project &  \normalsize{GitHub workflow, Gantt charts, SOP writing, BOM management}\\
+\end{tabularx}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
