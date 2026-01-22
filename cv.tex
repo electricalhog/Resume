@@ -36,6 +36,7 @@
 
 \RequirePackage{color}
 \RequirePackage{graphicx}
+\usepackage[export]{adjustbox}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[scale=0.95]{geometry}
 \usepackage[most]{tcolorbox}
@@ -97,7 +98,7 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
+\setlength\bibitemsep{0.25em}
 
 %for social icons
 \usepackage{fontawesome5}
@@ -119,25 +120,41 @@
 \newlength{\jobtextw}
 \setlength{\jobtextw}{\dimexpr\linewidth-\jobimgw\relax}
 
+% Include image at fixed width and crop vertically about center if taller than max height
+\newcommand{\jobimage}[1]{%
+  \begingroup
+    \sbox0{\includegraphics[width=\jobimgw,keepaspectratio]{#1}}%
+    \dimen0=\ht0 \advance\dimen0 by \dp0 % natural height at fixed width
+    \dimen2=3\baselineskip % max height
+    \ifdim\dimen0>\dimen2
+      \dimen4=\dimexpr(\dimen0-\dimen2)/2\relax
+      \adjustbox{clip,trim={0pt \dimen4 0pt \dimen4}}{\usebox{0}}%
+    \else
+      \usebox{0}%
+    \fi
+  \endgroup
+}
+
 \newenvironment{joblong}[5]
-    {
-    \renewcommand{\imgcontent}{\includegraphics[width=\jobimgw,keepaspectratio]{#5}}
-    \begin{tabularx}{\linewidth}{@{}l l X r@{}}
-    \textbf{#1} & \small\textit{#2} & \textit{#3} & \small\textbf{#4} \\[2pt]
-    \end{tabularx}
-    % Body row with fixed widths
-    \noindent
-    \begin{minipage}[m]{\dimexpr\linewidth-\projimgw-6pt\relax}
-    \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
-    }
-    {
-    \end{itemize}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[m]{\projimgw}
-    \imgcontent
-    \end{minipage}
-    }
+  {
+  % Keep width fixed; center-crop to two lines of text if taller
+  \renewcommand{\imgcontent}{\jobimage{#5}}
+  \begin{tabularx}{\linewidth}{@{}l l X r@{}}
+  \textbf{#1} & \small\textit{#2} & \textit{#3} & \small\textbf{#4} \\[2pt]
+  \end{tabularx}
+  % Body row with fixed widths
+  \noindent
+  \begin{minipage}[m]{\dimexpr\linewidth-\jobimgw-6pt\relax}
+  \begin{itemize}[nosep,leftmargin=1em,itemsep=\bulletspacing,label=--]
+  }
+  {
+  \end{itemize}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[m]{\jobimgw}
+  \imgcontent
+  \end{minipage}
+  }
 
 % Single knob to control project image column
 \newlength{\projimgw}
@@ -159,7 +176,7 @@
   \end{minipage}
   \hfill
   \begin{minipage}[m]{\dimexpr\linewidth-\projimgw-6pt\relax}
-  \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
+  \begin{itemize}[nosep,leftmargin=1em,itemsep=\bulletspacing,label=--]
   }
   {%
   \end{itemize}
@@ -186,8 +203,8 @@ Worcester, MA \ $|$ \
 \href{tel:+14132712478}{\raisebox{-0.05\height}\faMobile \ +1 (413) 271-2478} \\
 \end{tabularx}
 
-\columnratio{0.75}[0.25]
-\begin{paracol}{2}
+% \columnratio{0.75}[0.25]
+% \begin{paracol}{2}
 %----------------------------------------------------------------------------------------
 % SUMMARY
 %----------------------------------------------------------------------------------------
@@ -201,83 +218,84 @@ Aspiring engineer skilled in \textbf{power electronics, embedded systems, and PC
 \section{Work Experience}
 
 \begin{joblong}{Emvolon Inc.}{Woburn, MA}{Electrical Engineer Intern}{May 2025 - Aug 2025}{Photos/emvolon_logo.jpeg}
-\item Programmed and wired PLCs, DAQs, and embedded hardware
-\item Implemented features and constraints into electrical schematics
-\item Developed a patented energy recovery microgrid topology
+\item Programmed PLCs, DAQs, and embedded hardware using IEC 61131-3, LabVIEW, and C to run experiments
+\item Created electrical schematics from SOPs and P\&IDs through SolidWorks Electrical to implement system requirements
+% \item Researched available technology and brainstormed in teams to develop a patented energy recovery microgrid topology
 \end{joblong}
 
 \begin{joblong}{Jay's Garage}{Mendon, MA}{Automotive Technician}{Jun 2023 - Aug 2023}{Photos/Jays_garage.png}
-\item Diagnosed vehicles and developed repair procedures
-\item Performed repairs from engine rebuilds to circuit level rework
-\item Shortened turnaround time by days and minimized part costs
+\item Diagnosed vehicles using manufacture provided tools to write-up work orders, ensuring methodical troubleshooting
+\item Performed repairs from engine rebuilds to circuit level rework providing versitility in precision manual skills
+\item Shortened turnaround time by days and minimized part costs through resourceful problem solving
 \end{joblong}
 
-\begin{joblong}{Studio David Teeple}{Northampton, MA}{Something Associate}{Jul 2022 - Present}{Photos/David_teeple.png}
-\item Moved 10000lbs of sculptures and materials in 3 days, creating a cleaner studio
-\item Collaborated in developing pragmatic and ideological processes
-\item Experimented with novel technology uses in visual arts
+\begin{joblong}{Studio David Teeple}{Northampton, MA}{Creative Associate}{Jul 2022 - Present}{Photos/David_teeple.png}
+\item Moved 10000lbs of sculptures and materials in 3 days with rigorous micro- and macro-level planning
+\item Collaborated in developing pragmatic and ideological processes through openminded conversation
+\item Experimented with novel technology uses in visual arts, blending computer systems with the human experience
 \end{joblong}
 
 \begin{joblong}{Hennessey Precision}{Northampton, MA}{Business Assistant}{Aug 2020 - Feb 2022}{Photos/Hennessey_precision.png}
-\item Validated issues, completed repairs, ordered parts, and billed clients
-\item Expanded shop throughput that enabled growth into a larger space
+\item Validated issues, ordered parts, completed repairs, and billed clients to offload owner workload
+\item Increased shop throughput by 50\% by utilizing two bays, enabling business growth into a larger space
 \end{joblong}
 
 \begin{joblong}{FRC Team 4097}{Northampton, MA}{Student Leader}{Jan 2019 - Mar 2022}{Photos/FRC.png}
-\item Led electronics subteam in wiring and power systems design
-\item Mentored new members to build a talented team.
+\item Led electronics subteam in wiring and power systems design to mentor new members on engineering principles
+\item Organized the team through Covid disruptions, retaining engagement through virtual teaching workshops
+\item Achieved the highest competition ranking in team history by engaging in both design and driver roles
 \end{joblong}
 
-%----------------------------------------------------------------------------------------
-% SKILLS
-%----------------------------------------------------------------------------------------
+% %----------------------------------------------------------------------------------------
+% % SKILLS
+% %----------------------------------------------------------------------------------------
 
-\switchcolumn
+% \switchcolumn
 
-\begin{skillsbox}[Skills]
-\textbf{Design}
-\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
-  \item KiCad EDA
-  \item Cadence Virtuoso
-  \item SolidWorks Design
-  \item Autocad Electrical
-  \item Schematics, Blueprints
-\end{itemize}
+% \begin{skillsbox}[Skills]
+% \textbf{Design}
+% \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
+%   \item KiCad EDA
+%   \item Cadence Virtuoso
+%   \item SolidWorks Design
+%   \item Autocad Electrical
+%   \item Schematics, Blueprints
+% \end{itemize}
 
-\textbf{Build}
-\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
-  \item SMD soldering
-  \item 3D printing
-  \item Fabrication, MIG/TIG
-\end{itemize}
+% \textbf{Build}
+% \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
+%   \item SMD soldering
+%   \item 3D printing
+%   \item Fabrication, MIG/TIG
+% \end{itemize}
 
-\textbf{Test}
-\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
-  \item LtSpice, Simulink
-  \item LabVIEW, IEC 61131-3
-  \item Oscilloscope, VNA
-  \item Electronic Load, PSU
-\end{itemize}
+% \textbf{Test}
+% \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
+%   \item LtSpice, Simulink
+%   \item LabVIEW, IEC 61131-3
+%   \item Oscilloscope, VNA
+%   \item Electronic Load, PSU
+% \end{itemize}
 
-\textbf{Programming}
-\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
-  \item Embedded C/C++
-  \item Python
-%   \item Rust
-  \item HDL/Verilog
-\end{itemize}
+% \textbf{Programming}
+% \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
+%   \item Embedded C/C++
+%   \item Python
+% %   \item Rust
+%   \item HDL/Verilog
+% \end{itemize}
 
-\textbf{Project}
-\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
-  \item GitHub workflow
-  \item Gantt charts
-  \item SOP writing
-  \item BOM management
-  \item Troubleshooting
-\end{itemize}
-\end{skillsbox}
+% \textbf{Project}
+% \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=\bulletspacing,label=--]
+%   \item GitHub workflow
+%   \item Gantt charts
+%   \item SOP writing
+%   \item BOM management
+%   \item Troubleshooting
+% \end{itemize}
+% \end{skillsbox}
 
-\end{paracol}
+% \end{paracol}
 
 %----------------------------------------------------------------------------------------
 % PROJECTS
@@ -285,19 +303,20 @@ Aspiring engineer skilled in \textbf{power electronics, embedded systems, and PC
 \section{Projects}
 
 \begin{projectimag}{Permalux LED Lamp}{Mar 2025 - May 2025}{Photos/Permalux.png}
-\item LED desk lamp incorporating a user-replaceable CoB driver to avoid product obsolescence
-\item Analysis of cost to manufacture, failure rates, and market value to ensure a profitable product
+\item Produced a LED desk lamp incorporating a user-replaceable CoB driver to avoid product obsolescence
+\item Analyzed the manufacturing cost, failure rates, and market value which proved profitability
+\item Designed custom driver circuit with high power factor and low THD to reduce component stresses and prevent flicker
 \end{projectimag}
 
 \begin{projectimag}{USB PD Charger}{Apr 2024 - Present}{Photos/PD_Charger.png}
-\item First of a kind charger powered by generic DC sources that supports the full USB PD profile up to 240W
-\item Cycle-by-cycle closed loop switch timings and port protection to ensure safety
-\item Maximum efficiency of 90\% achieved with GaN FETs and multilayer PCB Design
+\item Building a first of a kind charger powered by generic DC sources that supports the full USB PD profile up to 240W
+\item Programming mixed-signal control loops with stability targets to ensure adherence to USB PD specifications
+\item Testing of a prototype testbench showed efficiency of 90\%, attributable to GaN FETs and multilayer PCB Design
 \end{projectimag}
 
 \begin{projectimag}{Discrete Component Opamp}{Mar 2024 - May 2024}{Photos/Discrete_OPamp.png}
-\item Rail-to-rail opamp designed with performance and stability objectives
-\item Implemented with individual transistors on a PCB and tested against simulation
+\item Simulated a rail-to-rail opamp to demonstrate analog design principles with consideration for real-world constraints
+\item Implemented with individual transistors on a custom PCB and tested against simulation to validated performance
 \end{projectimag}
 
 % \begin{projectimag}{Class D Amplifier}{Oct 2021 - Nov 2021}{Photos/Class_D_amp.png}
@@ -308,8 +327,7 @@ Aspiring engineer skilled in \textbf{power electronics, embedded systems, and PC
 
 \begin{projectimag}{Hybrid Electric RC Jet}{Dec 2019 - Aug 2021}{Photos/RC_Jet.png}
 \item Electric foam jet with a propane afterburner that increased thrust by 20\% and flight time by 50\%
-\item Full-system custom solutions for packaging, control, and redundancy
-\item Designed using static analysis, SPICE simulation, fluid dynamics, and physics principals
+\item Designed full-system custom solutions for packing, control, and redundancy using static analysis, SPICE simulation, fluid dynamics, and physics principals to make the impossible possible
 \end{projectimag}
 
 % \begin{projectimag}{Electronic Load}{Nov 2020 - Jun 2025}{Photos/Electronic_Load.png}
@@ -324,9 +342,17 @@ Aspiring engineer skilled in \textbf{power electronics, embedded systems, and PC
 % \end{projectimag}
 
 \begin{projectimag}{Buck Voltage Regulator}{Mar 2019 - Jun 2024}{Photos/Buck_Voltage_Regulator.png}
-\item Multiphase topology using custom switching logic to optimize transient response, quiescent power, and efficiency
-\item Iterative design through 6 revisions to achieve \textgreater98\% efficiency and 1kW output power with high reliability
+\item Innovated a multiphase regulator with custom switching logic that optimized transient response and quiescent power
+\item Iterated through 6 hardware revisions which achieved \textgreater98\% efficiency and 1kW output power with high reliability
 \end{projectimag}
+
+%----------------------------------------------------------------------------------------
+%\tPUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Publications}
+\nocite{FullerParedesRaymondMcNamara2024}
+\nocite{Emvolon_Patent}
+\printbibliography[heading=none]
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -339,5 +365,7 @@ Aug 2022 -- May 2026 & B.S. (Electrical \& Computer Engineering) at \textbf{Worc
 
 \vfill
 \center{\footnotesize Last updated: \today}
+
+
 
 \end{document}

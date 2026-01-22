@@ -16,5 +16,129 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{FullerParedesRaymondMcNamara2024}{report}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=859514c0f0b6081daf3c645b601aad07}{%
+           family={Fuller},
+           familyi={F\bibinitperiod},
+           given={Brianna},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=831509957abf7f9d4f8d413ad88f3717}{%
+           family={Paredes},
+           familyi={P\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10332ac68b8f6631c01489d61a0e2fd4}{%
+           family={Raymond},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6fb8540c4d79e4834d92a90531ef560}{%
+           family={McNamara},
+           familyi={M\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Worcester Polytechnic Institute}%
+      }
+      \list{location}{1}{%
+        {100 Institute Road, Worcester MA 01609-2280 USA}%
+      }
+      \strng{namehash}{7be99536f290729c36e027bf4bf85e00}
+      \strng{fullhash}{51ab43e2b7cdbffbe81e065557a7d919}
+      \strng{bibnamehash}{7be99536f290729c36e027bf4bf85e00}
+      \strng{authorbibnamehash}{7be99536f290729c36e027bf4bf85e00}
+      \strng{authornamehash}{7be99536f290729c36e027bf4bf85e00}
+      \strng{authorfullhash}{51ab43e2b7cdbffbe81e065557a7d919}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Developing Signage for the Cowasuck Band of the Pennacook-Abenaki People's History and Stories}
+      \field{type}{techreport}
+      \field{year}{2024}
+      \true{nocite}
+    \endentry
+    \entry{Emvolon_Patent}{patent}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=290c69982a95b81700af426940b71206}{%
+           family={Broomberg},
+           familyi={B\bibinitperiod},
+           given={Leslie},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ffb5aba0d9858b862639d446d48f8eb}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=882f3f13df9156ab4830c64094236af7}{%
+           family={Kasseris},
+           familyi={K\bibinitperiod},
+           given={Emmanouil},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f64399345c79066dca3aee1841e433d1}{%
+           family={Lakov},
+           familyi={L\bibinitperiod},
+           given={German},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=078effab0857110d99a6c3c53c6ce9e6}{%
+           family={Raymond},
+           familyi={R\bibinitperiod},
+           given={Daniel\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{holder}{1}{}{%
+        {{hash=dcda35d5ec2403e70d80fb4675379e68}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={Emvolon},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {United States}%
+      }
+      \strng{namehash}{83b7afe120933dfd07aac588f642118b}
+      \strng{fullhash}{53ed88a26e37818fe03f0a15c70882e4}
+      \strng{bibnamehash}{83b7afe120933dfd07aac588f642118b}
+      \strng{authorbibnamehash}{83b7afe120933dfd07aac588f642118b}
+      \strng{authornamehash}{83b7afe120933dfd07aac588f642118b}
+      \strng{authorfullhash}{53ed88a26e37818fe03f0a15c70882e4}
+      \strng{holderbibnamehash}{dcda35d5ec2403e70d80fb4675379e68}
+      \strng{holdernamehash}{dcda35d5ec2403e70d80fb4675379e68}
+      \strng{holderfullhash}{dcda35d5ec2403e70d80fb4675379e68}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{month}{1}
+      \field{note}{Pending}
+      \field{number}{19/452,116}
+      \field{title}{Devices and Methods for Managing Power of Modular Gas to Liquid Systems}
+      \field{type}{patentapp}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
