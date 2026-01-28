@@ -88,7 +88,7 @@
 \usepackage{multirow}
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{1pt}{2pt}
+\titlespacing{\section}{0pt}{1pt}{5pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -144,16 +144,16 @@
   \end{tabularx}
   % Body row with fixed widths
   \noindent
-  \begin{minipage}[m]{\dimexpr\linewidth-\jobimgw-6pt\relax}
+  % \begin{minipage}[m]{\dimexpr\linewidth-\jobimgw-6pt\relax}
   \begin{itemize}[nosep,leftmargin=1em,itemsep=\bulletspacing,label=--]
   }
   {
   \end{itemize}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[m]{\jobimgw}
-  \imgcontent
-  \end{minipage}
+  % \end{minipage}
+  % \hfill
+  % \begin{minipage}[m]{\jobimgw}
+  % \imgcontent
+  % \end{minipage}
   }
 
 % Single knob to control project image column
@@ -205,11 +205,31 @@ Worcester, MA \ $|$ \
 
 % \columnratio{0.75}[0.25]
 % \begin{paracol}{2}
+% %----------------------------------------------------------------------------------------
+% % SUMMARY
+% %----------------------------------------------------------------------------------------
+% \section{Summary}
+% Aspiring engineer skilled in \textbf{power electronics, embedded systems, and PCB design} with 6+ years of independent hardware design and prototyping experience. Versed in cross-disciplinary teams, I am eager to contribute to innovative product development.
+% Autodidactic learner
+
 %----------------------------------------------------------------------------------------
-% SUMMARY
+%	EDUCATION
 %----------------------------------------------------------------------------------------
-\section{Summary}
-Aspiring engineer skilled in \textbf{power electronics, embedded systems, and PCB design} with 6+ years of independent hardware design and prototyping experience. Versed in cross-disciplinary teams, I am eager to contribute to innovative product development.
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+Aug 2022 -- May 2026 & B.S. (Electrical \& Computer Engineering) at \textbf{Worcester Polytechnic Institute} \hfill \normalsize(GPA: 3.50/4.0) \\
+% 2021 -- 2022 & Dual Enrollment at \textbf{Smith College} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%\tPUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Publications}
+\nocite{FullerParedesRaymondMcNamara2024}
+\nocite{Emvolon_Patent}
+\printbibliography[heading=none]
+
+
 
 %----------------------------------------------------------------------------------------
 % EXPERIENCE
@@ -218,32 +238,36 @@ Aspiring engineer skilled in \textbf{power electronics, embedded systems, and PC
 \section{Work Experience}
 
 \begin{joblong}{Emvolon Inc.}{Woburn, MA}{Electrical Engineer Intern}{May 2025 - Aug 2025}{Photos/emvolon_logo.jpeg}
-\item Programmed PLCs, DAQs, and embedded hardware using IEC 61131-3, LabVIEW, and C to run experiments
-\item Created electrical schematics from SOPs and P\&IDs through SolidWorks Electrical to implement system requirements
+\item Deployed \textbf{IEC 61131-3} PLCs with intrinsicly safe sensors and actuators to control hazardous materials
+\item Programmed a FOC synchronous \textbf{motor drive} in \textbf{C} to balance energy flow between an engine and \textbf{battery bank}
+\item Created line diagrams with \textbf{SolidWorks Electrical} to implement system requirements derived from \textbf{SOPs} and P\&IDs
 % \item Researched available technology and brainstormed in teams to develop a patented energy recovery microgrid topology
 \end{joblong}
 
 \begin{joblong}{Jay's Garage}{Mendon, MA}{Automotive Technician}{Jun 2023 - Aug 2023}{Photos/Jays_garage.png}
-\item Diagnosed vehicles using manufacture provided tools to write-up work orders, ensuring methodical troubleshooting
-\item Performed repairs from engine rebuilds to circuit level rework providing versitility in precision manual skills
-\item Shortened turnaround time by days and minimized part costs through resourceful problem solving
+\item Diagnosed fickle \textbf{CAN bus} faults and quiescent current draws using \textbf{schematics}, voltmeters, and \textbf{oscilloscopes}
+\item Performed \textbf{component-level repairs} using reverse engineering techniques that saved on ordering expenses and lead times
 \end{joblong}
 
-\begin{joblong}{Studio David Teeple}{Northampton, MA}{Creative Associate}{Jul 2022 - Present}{Photos/David_teeple.png}
-\item Moved 10000lbs of sculptures and materials in 3 days with rigorous micro- and macro-level planning
-\item Collaborated in developing pragmatic and ideological processes through openminded conversation
-\item Experimented with novel technology uses in visual arts, blending computer systems with the human experience
+\begin{joblong}{Studio David Teeple}{Northampton, MA}{Studio Assistant}{Jul 2022 - Present}{Photos/David_teeple.png}
+% \item Moved 10000lbs of sculptures and materials in 3 days with rigorous micro- and macro-level planning
+\item Helped relocated a sculpture studio including 30 tons of materials, requiring micro- and macro-level \textbf{planning} %We had to put 4 tractor trailler loads in a space that could only hold 2 -- requiring a highly refined orginaizational process just to make it work
+% \item Collaborated in developing pragmatic and ideological processes through openminded conversation
+\item Collaborated to \textbf{configure workspaces} that allowed a densly filled studio to function creatively and practically
+% \item Experimented with novel technology uses in visual arts, blending computer systems with the human experience
+\item Designed \textbf{software} and calibrated \text{sensor response} for a exhibitable video installation through iterative user testing
+% Use the same analysis of above to describe other experiences -- don't dumb it down: use your big words when you need the big words and the little words when you need the little words
 \end{joblong}
 
 \begin{joblong}{Hennessey Precision}{Northampton, MA}{Business Assistant}{Aug 2020 - Feb 2022}{Photos/Hennessey_precision.png}
-\item Validated issues, ordered parts, completed repairs, and billed clients to offload owner workload
+\item Assisted the owner in validated issues, ordering parts, completing repairs, and \textbf{billing clients} to offload workload
 \item Increased shop throughput by 50\% by utilizing two bays, enabling business growth into a larger space
 \end{joblong}
 
 \begin{joblong}{FRC Team 4097}{Northampton, MA}{Student Leader}{Jan 2019 - Mar 2022}{Photos/FRC.png}
-\item Led electronics subteam in wiring and power systems design to mentor new members on engineering principles
-\item Organized the team through Covid disruptions, retaining engagement through virtual teaching workshops
-\item Achieved the highest competition ranking in team history by engaging in both design and driver roles
+\item Led electronics subteam in \textbf{wiring} and \textbf{power systems design} to mentor new members on engineering principles
+\item Organized the team through Covid disruptions, retaining engagement through virtual \textbf{teaching} workshops
+% \item Contributed to design and driver roles to acheive the highest competition ranking in team history
 \end{joblong}
 
 % %----------------------------------------------------------------------------------------
@@ -303,20 +327,20 @@ Aspiring engineer skilled in \textbf{power electronics, embedded systems, and PC
 \section{Projects}
 
 \begin{projectimag}{Permalux LED Lamp}{Mar 2025 - May 2025}{Photos/Permalux.png}
-\item Produced a LED desk lamp incorporating a user-replaceable CoB driver to avoid product obsolescence
-\item Analyzed the manufacturing cost, failure rates, and market value which proved profitability
-\item Designed custom driver circuit with high power factor and low THD to reduce component stresses and prevent flicker
+\item Produced an LED desk lamp incorporating a user-replaceable CoB driver to avoid product obsolescence
+\item Analyzed the manufacturing cost, \textbf{failure rates}, and market value which proved profitability at a \$100 retail price
+\item Built a \textbf{switch-mode PSU} with high power factor and low THD to reduce component stresses and prevent flicker
 \end{projectimag}
 
 \begin{projectimag}{USB PD Charger}{Apr 2024 - Present}{Photos/PD_Charger.png}
 \item Building a first of a kind charger powered by generic DC sources that supports the full USB PD profile up to 240W
-\item Programming mixed-signal control loops with stability targets to ensure adherence to USB PD specifications
-\item Testing of a prototype testbench showed efficiency of 90\%, attributable to GaN FETs and multilayer PCB Design
+\item Programming \textbf{mixed-signal control loops} with stability targets to ensure adherence to protocol specifications
+\item Testing of a prototype showed efficiency of 90\%, attributable to \textbf{GaN FETs} and \textbf{multilayer PCB design}
 \end{projectimag}
 
 \begin{projectimag}{Discrete Component Opamp}{Mar 2024 - May 2024}{Photos/Discrete_OPamp.png}
-\item Simulated a rail-to-rail opamp to demonstrate analog design principles with consideration for real-world constraints
-\item Implemented with individual transistors on a custom PCB and tested against simulation to validated performance
+\item Simulated a \textbf{rail-to-rail opamp} with \textbf{analog design} principles and consideration for real-world constraints
+\item Implemented with individual \textbf{transistors} and tested against \textbf{SPICE simulation} to validated performance
 \end{projectimag}
 
 % \begin{projectimag}{Class D Amplifier}{Oct 2021 - Nov 2021}{Photos/Class_D_amp.png}
@@ -326,8 +350,8 @@ Aspiring engineer skilled in \textbf{power electronics, embedded systems, and PC
 % \end{projectimag}
 
 \begin{projectimag}{Hybrid Electric RC Jet}{Dec 2019 - Aug 2021}{Photos/RC_Jet.png}
-\item Electric foam jet with a propane afterburner that increased thrust by 20\% and flight time by 50\%
-\item Designed full-system custom solutions for packing, control, and redundancy using static analysis, SPICE simulation, fluid dynamics, and physics principals to make the impossible possible
+\item Designed and \textbf{hand-fabricated} an RC airframe with integrated afterburner, extending practical flight time far beyond the sub-minute elecric limitation through a 500g custom propane system that boosted thrust by 1600g
+\item Applied \textbf{static analysis}, \textbf{hand calculations}, and \textbf{testbenchs} to ensure \textbf{redundancy} and high FoS
 \end{projectimag}
 
 % \begin{projectimag}{Electronic Load}{Nov 2020 - Jun 2025}{Photos/Electronic_Load.png}
@@ -342,25 +366,16 @@ Aspiring engineer skilled in \textbf{power electronics, embedded systems, and PC
 % \end{projectimag}
 
 \begin{projectimag}{Buck Voltage Regulator}{Mar 2019 - Jun 2024}{Photos/Buck_Voltage_Regulator.png}
-\item Innovated a multiphase regulator with custom switching logic that optimized transient response and quiescent power
-\item Iterated through 6 hardware revisions which achieved \textgreater98\% efficiency and 1kW output power with high reliability
+\item Innovated \textbf{digital logic} for a \textbf{multiphase regulator} that optimized transient response and quiescent power
+\item Iterated through 6 \textbf{hardware revisions} to achieve \textgreater98\% efficiency and 1kW output power with high reliability
 \end{projectimag}
 
 %----------------------------------------------------------------------------------------
-%\tPUBLICATIONS
+% EXTRACURRICULARS
 %----------------------------------------------------------------------------------------
-\section{Publications}
-\nocite{FullerParedesRaymondMcNamara2024}
-\nocite{Emvolon_Patent}
-\printbibliography[heading=none]
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-Aug 2022 -- May 2026 & B.S. (Electrical \& Computer Engineering) at \textbf{Worcester Polytechnic Institute} \hfill \normalsize(GPA: 3.50/4.0) \\
-% 2021 -- 2022 & Dual Enrollment at \textbf{Smith College} \\
+\section{Extracurriculars}
+\begin{tabularx}{\linewidth}{@{}C | C | C@{}}
+a-cappella, conductor, director, arranger & skiing, rock climbing, hiking, running & FPV racing, car modification, cooking \\
 \end{tabularx}
 
 \vfill
