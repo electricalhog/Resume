@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber cv"] 1769118728.67427 "cv.bcf" "cv.bbl" "cv" 1769636486.09479 0
+["biber cv"] 1769118728.67427 "cv.bcf" "cv.bbl" "cv" 1775072976.12641 0
   "citations.bib" 1769115612.45865 1526 6a53ac728e914df3507cfad025591bc9 ""
-  "cv.bcf" 1769636486.01682 107842 7bb640771117250202239b27938bad1d "pdflatex"
+  "cv.bcf" 1775072976.04246 107842 7bb640771117250202239b27938bad1d "pdflatex"
   (generated)
   "cv.bbl"
   "cv.blg"
   (rewritten before read)
-["pdflatex"] 1769636481.05114 "/home/daniel/Documents/Resume/cv.tex" "cv.pdf" "cv" 1769636486.09502 0
+["pdflatex"] 1775072974.80692 "/home/daniel/Documents/Resume/cv.tex" "cv.pdf" "cv" 1775072976.12665 0
   "/etc/texmf/web2c/texmf.cnf" 1758773362.83391 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/daniel/Documents/Resume/cv.tex" 1769636480.88403 16454 405f152c2265e359d6b44208ca8d27b8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1622837620 2920 d63721872b8c77041b88e51b8f7c291d ""
@@ -230,17 +230,17 @@
   "/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1636152094 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb" 1636152094 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1768684640.44435 5312232 f3296911be9cc021788f3f879cf0a47d ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1758773382 6800789 9f6dcceeb6c69204d5536a6eac96ee7c ""
-  "Photos/Buck_Voltage_Regulator.png" 1769117988.84512 1064258 534468ea1a44c6fe479eb5a12cc5b922 ""
-  "Photos/Discrete_OPamp.png" 1769117637.34314 746000 531029c2b06d5f3d8e69395a1ce59c6c ""
-  "Photos/PD_Charger.png" 1768688905.82004 1643446 7209fa1760aaa8a0fd5b822e3bc4343a ""
-  "Photos/Permalux.png" 1769117895.00086 916860 e72f08e410c983ae9638d5bd663ce91a ""
-  "Photos/RC_Jet.png" 1769117947.63989 576275 91dba849cb6d6d6476c0abb514df385d ""
-  "cv.aux" 1769636486.01482 1231 256c4ea354f419b9d68dd5aeebb8e0cf "pdflatex"
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1769701009.18681 5349216 bf3a80e68d946c7acd95ff030fd9bb63 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1769703805 6831132 f379c595e59778b2f6d6f34d3c9cfc63 ""
+  "Photos/Buck_Voltage_Regulator.png" 1775072974.64852 91393 422942e2cddb9b10f0ef9a3a4aec8fab ""
+  "Photos/Discrete_OPamp.png" 1775072974.44052 64635 5bf194e140154e0cf3f28d6d196460a4 ""
+  "Photos/PD_Charger.png" 1775072974.36753 126342 1f1109d51f01f8f7dfcb838ae0fee5f5 ""
+  "Photos/Permalux.png" 1775072974.18053 106790 2275c8b442f1fd7969c83dd7ecbee50d ""
+  "Photos/RC_Jet.png" 1775072974.52452 44783 a8bd4ee13b952ac1e3a87c139fd07665 ""
+  "cv.aux" 1775072976.03946 1231 256c4ea354f419b9d68dd5aeebb8e0cf "pdflatex"
   "cv.bbl" 1769118729.20424 5197 e9780b52131598e62209a90038fadbce "biber cv"
-  "cv.out" 1769636486.01482 518 58c0d81bd7fadf5e90f7c5a5ebcf6106 "pdflatex"
-  "cv.run.xml" 1769636486.01892 2296 b8f24f063b2e0944d4804aaf5bc774c7 "pdflatex"
+  "cv.out" 1775072976.04046 518 58c0d81bd7fadf5e90f7c5a5ebcf6106 "pdflatex"
+  "cv.run.xml" 1775072976.04361 2296 b8f24f063b2e0944d4804aaf5bc774c7 "pdflatex"
   "cv.tex" 1769636480.88403 16454 405f152c2265e359d6b44208ca8d27b8 ""
   (generated)
   "cv.aux"
