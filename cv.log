@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.29)  1 APR 2026 15:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.29)  28 APR 2026 10:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1103,34 +1103,34 @@ Package hyperref Info: Link coloring ON on input line 189.
 <Photos/Permalux.png, id=69, 301.125pt x 304.13625pt>
 File: Photos/Permalux.png Graphic file (type png)
 <use Photos/Permalux.png>
-Package pdftex.def Info: Photos/Permalux.png  used on input line 329.
+Package pdftex.def Info: Photos/Permalux.png  used on input line 339.
 (pdftex.def)             Requested size: 41.39832pt x 41.80841pt.
 <Photos/PD_Charger.png, id=71, 301.125pt x 301.125pt>
 File: Photos/PD_Charger.png Graphic file (type png)
 <use Photos/PD_Charger.png>
-Package pdftex.def Info: Photos/PD_Charger.png  used on input line 335.
+Package pdftex.def Info: Photos/PD_Charger.png  used on input line 348.
 (pdftex.def)             Requested size: 41.39832pt x 41.39447pt.
 <Photos/Discrete_OPamp.png, id=72, 301.125pt x 140.525pt>
 File: Photos/Discrete_OPamp.png Graphic file (type png)
 <use Photos/Discrete_OPamp.png>
-Package pdftex.def Info: Photos/Discrete_OPamp.png  used on input line 341.
+Package pdftex.def Info: Photos/Discrete_OPamp.png  used on input line 357.
 (pdftex.def)             Requested size: 41.39832pt x 19.31741pt.
 <Photos/RC_Jet.png, id=73, 301.125pt x 165.61874pt>
 File: Photos/RC_Jet.png Graphic file (type png)
 <use Photos/RC_Jet.png>
-Package pdftex.def Info: Photos/RC_Jet.png  used on input line 352.
+Package pdftex.def Info: Photos/RC_Jet.png  used on input line 370.
 (pdftex.def)             Requested size: 41.39832pt x 22.76695pt.
 <Photos/Buck_Voltage_Regulator.png, id=74, 301.125pt x 261.97874pt>
 File: Photos/Buck_Voltage_Regulator.png Graphic file (type png)
 <use Photos/Buck_Voltage_Regulator.png>
-Package pdftex.def Info: Photos/Buck_Voltage_Regulator.png  used on input line 368.
+Package pdftex.def Info: Photos/Buck_Voltage_Regulator.png  used on input line 389.
 (pdftex.def)             Requested size: 41.39832pt x 36.01318pt.
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 370.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 392.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 370.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 392.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./Photos/Permalux.png> <./Photos/PD_Charger.png> <./Photos/Discrete_OPamp.png> <./Photos/RC_Jet.png> <./Photos/Buck_Voltage_Regulator.png>] (./cv.aux)
@@ -1153,7 +1153,7 @@ Here is how much of TeX's memory you used:
  59 hyphenation exceptions out of 8191
  93i,9n,99p,1221b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on cv.pdf (1 page, 632192 bytes).
+Output written on cv.pdf (1 page, 632240 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  98 compressed objects within 1 object stream
